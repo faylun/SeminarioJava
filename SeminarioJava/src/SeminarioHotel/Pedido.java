@@ -37,8 +37,8 @@ public class Pedido {
         }
 
         @Override
-        public PedidoBuilder buildHotel(String nome, boolean aberto){
-            this.hotel = new Hotel(nome, aberto);
+        public PedidoBuilder buildHotel(String nome, boolean aberto, int andares, boolean temEstacionamento){
+            this.hotel = new Hotel(nome, aberto, andares, temEstacionamento);
             return this;
         }
 

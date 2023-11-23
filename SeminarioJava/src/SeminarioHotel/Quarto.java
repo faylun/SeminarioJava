@@ -10,7 +10,6 @@ public class Quarto {
     private double diaria;
 
     public Quarto(String tipo, boolean status, int capacidade, double diaria) {
-
         this.tipo = tipo;
         this.status = status;
         this.capacidade = capacidade;

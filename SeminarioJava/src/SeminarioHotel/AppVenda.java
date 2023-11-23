@@ -38,15 +38,25 @@ public class AppVenda {
 //        System.out.println();
 //        System.out.println(pedido3);
 
-
+        
         /*        COM O BUILDER        */
 
+        Director diretor = new Director();
+        Pedido.PedidoBuilder builder = new Pedido.PedidoBuilder();
+        diretor.construirPedidoCompleto(builder);
+        Pedido pedido = builder.build();
+
+        /*
         Pedido pedido = new Pedido.PedidoBuilder()
                 .buildCliente("Joaozin Techzin", 1, "48999887766")
                 .buildVendedor(1, "Jose Costa")
                 .buildQuarto("5 estrelas", true, 3, 1200.00)
-                .buildHotel("Techzin Liz", true)
                 .build();
+*/
+
+
+
+
 
         System.out.println(pedido);
     }

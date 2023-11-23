@@ -4,17 +4,17 @@ import java.util.ArrayList;
 
 public class Hotel {
         private String nome;
+        private int andares;
+        private boolean possuiEstacionamento;
         private boolean aberto;
 
         private ArrayList<Quarto> quartos;
 
-    public Hotel(){
-
-    }
-
-    public Hotel(String nome, boolean aberto) {
+    public Hotel(String nome, boolean aberto, int andares, boolean temEstacionamento) {
         this.nome = nome;
         this.aberto = aberto;
+        this.andares = andares;
+        this.possuiEstacionamento = temEstacionamento; 
         quartos = new ArrayList<>();
     }
 
