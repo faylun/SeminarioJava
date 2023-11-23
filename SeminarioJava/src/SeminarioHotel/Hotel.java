@@ -32,7 +32,9 @@ public class Hotel {
         return quartos.size();
     }
     public String getNome() {
-        return nome;
+        if (this.nome != null)
+            return nome;
+        return "Não Informado";
     }
 
     public void setNome(String nome) {

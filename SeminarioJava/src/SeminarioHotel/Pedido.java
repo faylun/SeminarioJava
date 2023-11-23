@@ -77,16 +77,17 @@ public class Pedido {
     }
 
 
-    @Override
-    public String toString() {
-        return "---------------- PEDIDO NUMERO " + Math.abs(this.numero) + " ----------------" +
-                "\nNome do Hotel = " + hotel.getNome() +
-                "\nNome do Cliente = " + cliente.getNome() +
-                "\n\nQuarto Numero " + quarto.getNumero() +
-                "\nCapacidade de Pessoas = " + quarto.getCapacidade() +
-                "\nStatus do Quarto = " + (quarto.isStatus() ? "Disponivel" : "Indisponivel")  +
-                "\nTipo do Quarto = " + quarto.getTipo() +
-                "\nDiaria = R$" + quarto.getDiaria() +
-                "\n----------------------------------------------------------";
+    public void mostrar() {
+        System.out.println("\n---------------- PEDIDO NUMERO " + Math.abs(this.numero) + " ----------------");
+        System.out.println();
+        System.out.println(this.hotel != null ? ("Nome do Hotel = " + hotel.getNome()) : ("Nome do Hotel = N/I"));
+        System.out.println(this.cliente != null ? ("Nome do Cliente = " + this.cliente.getNome()) : ("Nome do Cliente = N/I"));
+        System.out.println();
+        System.out.println(this.quarto != null ? ("Numero do Quarto = " + this.quarto.getNumero()) : ("Numero do Quarto = N/I"));
+        System.out.println(this.quarto != null ? ("Capacidade de Pessoas = " + this.quarto.getCapacidade()) : ("Numero do Quarto = N/I"));
+        System.out.println(this.quarto != null ? ("Status do Quarto = " + (quarto.isStatus() ? "Disponivel" : "Indisponivel")) : ("Status do Quarto = N/I"));
+        System.out.println(this.quarto != null ? ("Tipo do Quarto = " + this.quarto.getTipo()) : ("Status do Quarto = N/I"));
+        System.out.println(this.quarto != null ? ("Diaria = R$" + this.quarto.getDiaria()) : ("Diaria = N/I"));
+        System.out.println("\n----------------------------------------------------------");
     }
 }
